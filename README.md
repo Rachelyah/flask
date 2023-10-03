@@ -103,3 +103,9 @@ def index(): #方法叫做index，也就是我的首頁
 
 ### 使用Render工具把網頁變成正是可上線的網頁
 [Render](https://dashboard.render.com/)
+- 註冊Render網頁會員，會提供免費的網站空間
+- 連結自己的GitHub檔案
+- New webserver
+- 選擇自己寫網頁的repo
+- 寫網頁資料(網頁名稱、架設在新加坡、確定自己的Branch是不是在你的空間main or master)
+- 在starcommand裡輸入gunicorn index:app (這是甚麼意思？)

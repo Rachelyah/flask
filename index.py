@@ -5,3 +5,7 @@ app = Flask(__name__) #__name__是網頁名稱 #app是flask應用程式的實體
 @app.route("/") 
 def index(): #方法叫做index，也就是我的首頁
     return render_template("index.html") #傳回我templats資料夾中的index網頁
+
+@app.route("/hello_world")
+def hello_world():
+    return "<h1>hello</h1>"
