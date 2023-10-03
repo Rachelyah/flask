@@ -16,7 +16,7 @@ gh repo create flask --public --source=. --remote=origin
 - [GitHub cli的語法忘記可以查這邊](https://cli.github.com/)
 
 ### 在虛擬環境下載套件Falsk
-- 新增requirement.txt 裡面寫你下載的套件：套件名稱==版本
+- 新增requirement.txt 裡面寫你下載的套件：套件名稱==版本(為避免執行錯誤版本也可以不要寫)
 - 直接在虛擬環境裡，執行requirement.txt檔案內的套件下載
 - 備註：軟體版本怎麼查？去pypi查，所有的套件都會在那邊更新
 - [pypi](https://pypi.org/project/Flask/)
@@ -78,6 +78,16 @@ def hello_world():
 ```
 from flask import render_template
 ```
+- 我今天使用了這個flask的render_template
+- 所以我創立一個templates資料夾，裡面可以放css、圖片等靜態圖片
+- 但是要透過template的語法連結(url...)
+
+```
+def index(): #方法叫做index，也就是我的首頁
+    return render_template("index.html") 
+```
+- 我有一個index.html的首頁，我要透過py把它掛在網頁上
+- ("index.html")是我的網頁名稱
 
 ### static files 是掛入圖片&連結css
 - 在最外面新增static資料夾＞裡面建立css資料夾＞建立css頁面(index.css)
@@ -90,3 +100,6 @@ from flask import render_template
     - [Jinja-Template Designer Documentation](https://jinja.palletsprojects.com/en/3.1.x/)
     2. 絕對路徑：
     ```href="/static/css/index.css"```
+
+### 使用Render工具把網頁變成正是可上線的網頁
+[Render](https://dashboard.render.com/)
